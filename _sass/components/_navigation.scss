@@ -1,0 +1,70 @@
+/**
+ * Navigation
+ */
+
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    background: $nav-background;
+
+    .nav-container {
+      padding: 0 1.5rem;
+      height: $nav-height;
+      max-width: $nav-width;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: height 0.3s ease;
+    }
+  
+    .brand {
+      a {
+        display: flex;
+        align-items: center;
+        color: $nav-font-color;
+        margin-right: 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+        
+        &:hover,
+        &:focus {
+          color: $nav-font-color-hover;
+          text-decoration: none;
+        }
+      }
+  
+      .text {
+        display: none;
+      }
+    }
+  
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex: 1;
+        margin: 0;
+  
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+        font-weight: 500;
+        padding: 1rem 0.75rem;
+        margin: 0;
+        color: $nav-font-color-alt;
+        text-align: center;
+  
+        &:hover,
+        &:focus {
+          color: $nav-font-color-alt-hover;
+          text-decoration: none;
+        }
+      }
+    }
+}

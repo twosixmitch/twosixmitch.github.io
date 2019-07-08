@@ -4,7 +4,7 @@ email: twosixmitch@gmail.com
 description: >
   Blog site.
 baseurl: ""
-url: "http://twosixmitch.github.io"
+url: "http://localhost:4000"
 twitter_username: twosixmitch
 github_username:  twosixmitch
 # Build Settings
