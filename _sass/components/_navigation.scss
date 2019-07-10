@@ -9,13 +9,14 @@
     left: 0;
     z-index: 3;
     width: 100%;
+    transition: all 0.3s ease;
     background: $nav-background;
 
     .nav-container {
       padding: 0 1.5rem;
       height: $nav-height;
       max-width: $nav-width;
-      margin: 0 auto;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
