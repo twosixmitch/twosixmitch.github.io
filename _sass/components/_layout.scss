@@ -2,23 +2,24 @@
  * Layout
  */
 
- #main-content {
-    margin-top: $nav-height;
-    padding: 5px 0 0;
-  }
-  
-  @include small-breakpoint {
-    #main-content {
-      margin-top: $nav-height;
-      padding: 5px 0 0;
-    }
-  }
-  
-  iframe {
-    margin-bottom: 0;
-  }
-  
-  ::selection {
-    background: rgba(118, 234, 255, 0.8);
-    color: #111;
-  }
+#main-content {
+  margin-top: $nav-height;
+  padding: $padding 0 0;
+  min-height: calc(100vh - 124px);
+}
+
+.container {
+  max-width: $content-width;
+  padding: 0 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  margin-bottom: 0;
+}
+
+::selection {
+  background: rgba(118, 234, 255, 0.8);
+  color: #111;
+}

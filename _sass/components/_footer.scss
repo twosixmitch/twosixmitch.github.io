@@ -2,20 +2,10 @@
  * Footer
  */
 
- .footer {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    width: 100%;
+ .footer {    
+    height: $footer-height;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     background: $footer-background;
-
-    .footer-container {
-        height: $footer-height;
-        max-width: $footer-width;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        transition: height 0.3s ease;
-    }  
 }
