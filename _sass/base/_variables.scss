@@ -178,18 +178,19 @@ $code-borders             : $borders                                   !default;
 // Navigation
 //==============================================================================
 
-$nav-background            : rgb(36, 212, 224)                       !default;
-$nav-height                : 50px                                      !default;
+$nav-background            : rgb(256, 256, 256)                       !default;
+$nav-height                : 55px                                      !default;
 $nav-width                 : 850px                                     !default;
-$nav-font-color            : rgb(27, 27, 27)                         !default;
-$nav-font-color-hover      : rgb(119, 68, 68)                        !default;
-$nav-font-color-alt        : rgb(58, 58, 58)                         !default;
-$nav-font-color-alt-hover  : rgb(134, 23, 23)                         !default;
+$nav-font-color            : rgb(64, 64, 64)                         !default;
+$nav-font-color-hover      : rgb(32, 32, 32)                        !default;
+$nav-font-color-alt        : rgb(64, 64, 64)                         !default;
+$nav-font-color-alt-hover  : rgb(32, 32, 32)                         !default;
 
 //==============================================================================
 // Footer
 //==============================================================================
 
-$footer-background         : rgb(36, 212, 224)                       !default;
-$footer-height             : 50px                                      !default;
+$footer-background         : rgb(256, 256, 256)                       !default;
+$footer-height             : 55px                                      !default;
 $footer-width              : 850px                                     !default;
+$footer-font-color         : rgb(64, 64, 64)                         !default;
