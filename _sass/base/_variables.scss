@@ -178,11 +178,12 @@ $code-borders             : $borders                                   !default;
 // Navigation
 //==============================================================================
 
-$nav-background            : rgb(256, 256, 256)                       !default;
-$nav-height                : 55px                                      !default;
+$nav-background            : rgb(256, 256, 256)                        !default;
+$nav-desktop-height        : 55px                                      !default;
+$nav-mobile-height         : 65px                                      !default;
 $nav-width                 : 850px                                     !default;
 $nav-font-color            : rgb(64, 64, 64)                         !default;
-$nav-font-color-hover      : rgb(32, 32, 32)                        !default;
+$nav-font-color-hover      : rgb(32, 32, 32)                         !default;
 $nav-font-color-alt        : rgb(64, 64, 64)                         !default;
 $nav-font-color-alt-hover  : rgb(32, 32, 32)                         !default;
 
@@ -190,7 +191,7 @@ $nav-font-color-alt-hover  : rgb(32, 32, 32)                         !default;
 // Footer
 //==============================================================================
 
-$footer-background         : rgb(256, 256, 256)                       !default;
+$footer-background         : rgb(256, 256, 256)                        !default;
 $footer-height             : 55px                                      !default;
 $footer-width              : 850px                                     !default;
 $footer-font-color         : rgb(64, 64, 64)                         !default;
