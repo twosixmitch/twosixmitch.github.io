@@ -18,7 +18,7 @@ $content-width            : 850px                                      !default;
 // Breakpoints
 //==============================================================================
 
-$mobile                   : 850px                                      !default;
+$mobile                   : $x-small                                   !default;
 $tablet                   : $small                                     !default;
 $desktop                  : $medium                                    !default;
 
@@ -91,10 +91,10 @@ $h5                       : 1.25rem !default;
 // Spacing
 //==============================================================================
 
-$padding                  : 1rem                                        !default;
-$margins                  : 1.5rem                                      !default;
-$content-padding          : 60px 0                                      !default;
-$content-padding-mobile   : 30px 0                                      !default;
+$padding                  : 1rem                                       !default;
+$margins                  : 1.5rem                                     !default;
+$content-padding          : 60px 0                                     !default;
+$content-padding-mobile   : 30px 0                                     !default;
 
 //==============================================================================
 // Borders
@@ -183,9 +183,9 @@ $nav-desktop-height        : 55px                                      !default;
 $nav-mobile-height         : 65px                                      !default;
 $nav-width                 : 850px                                     !default;
 $nav-font-color            : rgb(64, 64, 64)                         !default;
-$nav-font-color-hover      : rgb(32, 32, 32)                         !default;
+$nav-font-color-hover      : rgb(0, 0, 0)                            !default;
 $nav-font-color-alt        : rgb(64, 64, 64)                         !default;
-$nav-font-color-alt-hover  : rgb(32, 32, 32)                         !default;
+$nav-font-color-alt-hover  : rgb(0, 0, 0)                            !default;
 
 //==============================================================================
 // Footer
@@ -195,3 +195,11 @@ $footer-background         : rgb(256, 256, 256)                        !default;
 $footer-height             : 55px                                      !default;
 $footer-width              : 850px                                     !default;
 $footer-font-color         : rgb(64, 64, 64)                         !default;
+
+//==============================================================================
+// Brand
+//==============================================================================
+
+$brand-color-blue          : #4FA5C7                                 !default;
+$brand-color-yellow        : #FFD200                                 !default;
+$brand-color-white         : #FFFFFF                                 !default;
