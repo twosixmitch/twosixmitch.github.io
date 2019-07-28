@@ -13,24 +13,34 @@
     justify-content: center;
 
     .post-card {
-        padding: 1rem;
-        margin: 0 0 1rem 0;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         max-width: 100%;
     
         .graphic {
-            background-color: #4FA5C7;
+            //background-color: #4FA5C7;
+            margin: 0 1rem 0 0;
             
-            max-height: 256px;
-            height: 200px; // temp
+            height: $post-small-img-height;
+            width: $post-small-img-width;
+            min-width: $post-small-img-width;
+            min-height: $post-small-img-height;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
         }
     
         .details {
     
             h2 {
-                margin: 1rem 0 0.5rem 0;
-                
+                margin: 0 0 0.5rem 0;
+            
                 a {
                     color: $font-color;
                     &:hover,
@@ -40,21 +50,32 @@
                     }
                 }   
             }
-    
-            .date {
-                margin: 0.5rem 0;
-                font-size: 75%;
-                color: grey;
+
+            .meta {
+                display: flex;
+                flex-direction: row;
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .date {
+                    margin-right: 0.5rem;
+                    font-size: 75%;
+                    color: grey;
+                }
+
+                .tags {
+                    margin: 0;
+                    font-size: 75%;
+                    color: grey;
+                    text-transform: uppercase;
+                }
             }
-    
+
             .excerpt {
-                margin: 0.5rem 0;
-            }
-    
-            .tags {
-                margin: 0.5rem 0;
-                font-size: 75%;
-                color: grey;
+                display: none;
             }
         }
     }
@@ -68,9 +89,11 @@
             max-width: 100%;
 
             .graphic {
-                margin: 0 1rem 0 0;
-                min-width: 256px;
-                min-height: 204px;
+                margin: 0 1.5rem 0 0;
+                height: $post-large-img-height;
+                width: $post-large-img-width;
+                min-width: $post-large-img-width;
+                min-height: $post-large-img-height;
             }
 
             .details {
@@ -78,6 +101,15 @@
 
                 h2 {
                     margin: 0 0 0.5rem 0;  
+                }
+
+                .excerpt {
+                    display: block;
+                    margin: 0.5rem 0 0 0;
+                    
+                    p {
+                        margin: 0;
+                    }
                 }
             }
         }
