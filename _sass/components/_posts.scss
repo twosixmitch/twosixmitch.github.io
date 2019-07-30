@@ -2,7 +2,7 @@
  * Posts
  */
 
- article {
+article {
     header {
         display: flex;
         flex-direction: row;
@@ -48,24 +48,23 @@
             }
         }
     }
- }
+}
 
+@include small-breakpoint {
+  article {
+    header {
+      img {
+        width: $post-large-img-width;
+        height: $post-large-img-height;
+        min-width: $post-large-img-width;
+        margin-right: 1.5rem;
+      }
 
- @include small-breakpoint {
-    article {
-        header {
-            img {
-                width: $post-large-img-width;
-                height: $post-large-img-height;
-                min-width: $post-large-img-width;
-                margin-right: 1.5rem;
-            }
-
-            .details {
-                h1 {
-                    margin-bottom: 1rem;
-                }
-            }
+      .details {
+        h1 {
+            margin-bottom: 1rem;
         }
+      }
     }
+  }
 }

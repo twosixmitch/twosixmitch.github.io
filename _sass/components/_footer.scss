@@ -2,21 +2,21 @@
  * Footer
  */
 
- .footer {    
-    height: $footer-height;
+.footer {    
+  height: $footer-height;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $footer-background;
+
+  p {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    background: $footer-background;
-    
-    p {
-        display: flex;
-        align-items: center;
-        font-size: 1rem;
-        font-weight: 400;
-        margin: 0;
-        color: $footer-font-color;
-        text-align: center;
-    }
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    color: $footer-font-color;
+    text-align: center;
+  }
 }

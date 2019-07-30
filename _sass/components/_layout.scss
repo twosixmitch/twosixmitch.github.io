@@ -29,73 +29,103 @@ iframe {
   color: #111;
 }
 
-.profile-intro {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem 0 1.5rem 0;
+.front-page {
 
-  img {
-    max-width: 128px;
-    height: auto;
-    padding: 0 0.5rem;
+  header {
+
+    margin: 1rem 1rem 2rem 1rem;
+
+    .profile-intro {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+    
+      img {
+        max-width: 128px;
+        height: auto;
+        padding: 0 0.5rem;
+      }
+    
+      h1 {
+        margin: 0;
+        padding: 0 0.5rem;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    .profile-bio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+      margin: 0;
+      
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 
-  h1 {
-    margin: 0;
-    padding: 0 0.5rem;
-    font-weight: 600;
-    font-size: 2.5rem;
-    text-align: center;
-  }
-}
-
-.profile-bio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-
-  margin: 2rem 0 2rem 0;
+  .latest-posts {
+    margin-bottom: 1rem;
   
-  p {
-    //display: flex;
-    align-items: center;
-    text-align: center;
-    font-size: 1.25rem;
-    margin: 1rem 0 0 0;
-    width: calc(100% - 20%);
+    h2 {
+      margin: 0 0 1rem 1rem;
+    }
+  
+    .view-more {
+      margin-top: 1rem;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
   }
 }
+
+
 
 @include small-breakpoint {
-  .profile-intro {
-    margin: 3rem 0 3rem 0;
-  
-    img {
-      max-width: 256px;
-      height: auto;
-      padding: 0 2rem;
-    }
-  
-    h1 {
-      margin: 0;
-      padding: 0 2rem;
-      font-weight: 600;
-      font-size: 4rem;
-      text-align: center;
-    }
-  }
-
-  .profile-bio {
-    margin: 3rem 0 3rem 0;
+  .front-page {
     
-    p {
-      font-size: 120%;
-      margin: 0.5rem 0 0 0;
-      width: calc(100% - 10%);
+    header {
+
+      margin: 3rem 1rem;
+
+      .profile-intro {
+        margin: 0;
+      
+        img {
+          max-width: 200px;
+          height: auto;
+          padding: 0 1.5rem;
+        }
+      
+        h1 {
+          margin: 0;
+          padding: 0 1.5rem;
+          font-weight: 600;
+          font-size: 3.5rem;
+          text-align: center;
+        }
+      }
+
+      .profile-bio {
+        margin: 1.5rem 0 2rem 0;
+        
+        p {
+          text-align: center;
+          margin: 0;
+        }
+      }
+    }
+
+    .latest-posts {
+      margin: 1rem;
     }
   }
 }

@@ -1,13 +1,26 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="profile-intro">
-        <img src="/assets/images/profile_headshot.png" alt="profile">
-        <h1>Welcome!<br>I'm Mitch</h1>
-    </div>
-    <div class="profile-bio">
-        <p>I am a software developer born and raised in New Zealand.</p>
-        <p>I created this website to talk about things I know and some things I don't.</p>
-    </div>
+<div class="container front-page">
+    <header>
+        <div class="profile-intro">
+            <img src="/assets/images/profile_headshot.png" alt="profile">
+            <h1>Welcome!<br>I'm Mitch</h1>
+        </div>
+        <div class="profile-bio">
+            <p>I am a software developer born and raised in New Zealand.</p>
+            <p>I created this website to talk about things I know and some things I don't.</p>
+        </div>
+    </header>
+    <section class="section latest-posts">
+        <h2>Latest posts</h2>
+        <div class="posts-container">
+            {% for post in site.posts limit:2 %}
+            {% include postcard.html %}
+            {% endfor %}
+        </div>
+        <div class="view-more">
+            <a class="button" href="/blog/">view more</a>
+        </div>
+    </section>
 </div>
