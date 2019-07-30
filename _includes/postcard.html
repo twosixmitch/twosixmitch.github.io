@@ -7,7 +7,7 @@
 	<div class="details">
 		<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
 		<div class="meta">
-			{% include date.html %}
+			{% include date.html date=post.date %}
 			<div class="tags">{{ post.tags }}</div>
 		</div>
 		<div class="excerpt">{{ post.excerpt | strip_html | truncatewords:11 }}</div>
