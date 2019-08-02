@@ -13,3 +13,15 @@ sass:
 include: ['_pages']
 kramdown:
   input: GFM
+
+collections:
+  category:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"

@@ -7,7 +7,7 @@ article {
         display: flex;
         flex-direction: row;
         margin-top: 1.5rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
 
         img {
             width: $post-small-img-width;
@@ -53,6 +53,7 @@ article {
 @include small-breakpoint {
   article {
     header {
+      margin-bottom: 2.5rem;
       img {
         width: $post-large-img-width;
         height: $post-large-img-height;

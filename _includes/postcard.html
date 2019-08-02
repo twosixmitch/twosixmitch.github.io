@@ -5,11 +5,11 @@
 		</a>
 	</div>
 	<div class="details">
-		<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
 		<div class="meta">
 			{% include date.html date=post.date %}
-			<div class="tags">{{ post.tags }}</div>
+			<div class="tags">{{ post.categories }}</div>
 		</div>
-		<div class="excerpt">{{ post.excerpt | strip_html | truncatewords:11 }}</div>
+		<div class="excerpt">{{ post.excerpt | strip_html | truncatewords:25 }}</div>
 	</div>
 </div>

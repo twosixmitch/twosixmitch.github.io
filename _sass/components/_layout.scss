@@ -52,7 +52,7 @@ iframe {
         margin: 0;
         padding: 0 0.5rem;
         font-weight: 600;
-        font-size: 2.5rem;
+        font-size: 3rem;
         text-align: center;
       }
     }
@@ -71,19 +71,11 @@ iframe {
     }
   }
 
-  .latest-posts {
-    margin-bottom: 1rem;
-  
-    h2 {
-      margin: 0 0 1rem 1rem;
-    }
-  
-    .view-more {
-      margin-top: 1rem;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-    }
+  .view-more {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
   }
 }
 
@@ -109,7 +101,7 @@ iframe {
           margin: 0;
           padding: 0 1.5rem;
           font-weight: 600;
-          font-size: 3.5rem;
+          font-size: 4rem;
           text-align: center;
         }
       }
@@ -122,10 +114,6 @@ iframe {
           margin: 0;
         }
       }
-    }
-
-    .latest-posts {
-      margin: 1rem;
     }
   }
 }

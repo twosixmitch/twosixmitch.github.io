@@ -2,14 +2,59 @@
  * Blog
  */
 
-.blog {
-  
-  .latest-posts {
-    margin: 2rem 0;
+.blog-header {
 
-    h2 {
-      margin: 0 0 1rem 1rem;
+  margin: 0 1rem 2rem 1rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    list-style: none;
+
+    li {
+      margin: 0 1rem;
+      padding: 0;
+      
+      min-width: 75px;
+      text-align: center;
+
+      a {
+        margin: 0;
+        padding: 1rem 0;
+        display: block;
+        
+        font-size: 1.1rem;
+        font-weight:600;
+        color: $nav-font-color;
+        
+        &:hover,
+        &:focus {
+          color: $nav-font-color-hover;
+          text-decoration: none;
+        }
+      }
     }
-    
   }
+}
+
+@include small-breakpoint {
+  .blog-header {
+    margin: 0 0 2rem 0;
+  
+    ul {
+      li {
+        margin: 0 2rem;
+      }
+    }
+  }
+}
+
+.latest-posts {
+  margin: 1rem 0;
 }
