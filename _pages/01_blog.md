@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
+permalink: /blog
 ---
 <div class="container blog">
   {% include blog-header.html %}
