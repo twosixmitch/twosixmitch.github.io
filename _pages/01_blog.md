@@ -2,6 +2,7 @@
 layout: default
 title: Blog
 permalink: /blog
+category: blog
 ---
 <div class="container blog">
   {% include blog-header.html %}

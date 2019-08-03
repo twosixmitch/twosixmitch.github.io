@@ -4,7 +4,7 @@
 
 .blog-header {
 
-  margin: 0 1rem 2rem 1rem;
+  margin: 0 0 2rem 0;
 
   ul {
     margin: 0;
@@ -14,29 +14,33 @@
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(64,64,64);
+    border-top: 2px solid rgb(64,64,64);
     list-style: none;
 
     li {
       margin: 0 1rem;
       padding: 0;
       
-      min-width: 75px;
+      min-width: 70px;
       text-align: center;
 
       a {
-        margin: 0;
-        padding: 1rem 0;
+        margin: 0.25rem 0 0.25rem 0;
+        padding: 0.25rem 0;
         display: block;
         
         font-size: 1.1rem;
         font-weight:600;
-        color: $nav-font-color;
+        color: rgb(128,128,128);
+        border: 2px solid transparent;
+        border-radius: 0px 0px 3px 3px;
         
         &:hover,
-        &:focus {
-          color: $nav-font-color-hover;
-          text-decoration: none;
+        &:focus,
+        &.active {
+          color: black;
+          border-bottom: 2px solid $brand-color-blue;
         }
       }
     }
@@ -45,16 +49,12 @@
 
 @include small-breakpoint {
   .blog-header {
-    margin: 0 0 2rem 0;
+    margin: 0.5rem 0 2rem 0;
   
     ul {
       li {
-        margin: 0 2rem;
+        margin: 0 2.5rem;
       }
     }
   }
-}
-
-.latest-posts {
-  margin: 1rem 0;
 }
