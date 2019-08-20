@@ -1,13 +1,13 @@
 <nav class="blog-header">
   <ul>
     <li>
+        <a href="/life" {% if page.category == "life" %} class="active"{% endif %}>Life</a>
+    </li>
+    <li>
       <a href="/coding" {% if page.category == "coding" %} class="active"{% endif %}>Coding</a>
     </li>
     <li>
       <a href="/languages" {% if page.category == "languages" %} class="active"{% endif %}>Languages</a>
-    </li>
-    <li>
-      <a href="/travel" {% if page.category == "travel" %} class="active"{% endif %}>Travel</a>
     </li>
   </ul>
 </nav>

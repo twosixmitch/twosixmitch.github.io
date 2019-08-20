@@ -4,11 +4,20 @@ layout: default
 <div class="container">
   {% include blog-header.html %}
   <section class="section latest-posts">
+    {% if site.categories[page.category].size > 0 %}
+    
     <h2>Latest posts</h2>
     <div class="posts-container">
       {% for post in site.categories[page.category] %}
         {% include postcard.html %}
       {% endfor %}
     </div>
+    
+    {% else %}
+
+    <h2>Latest posts</h2>
+    <p>Sorry, no posts available yet.</p>
+
+    {% endif %}
   </section>
 </div>
