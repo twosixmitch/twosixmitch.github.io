@@ -1,7 +1,7 @@
 ---
 layout:        post
 title:         "The baby who didn't want to be born - A self introduction"
-date:          2019-08-19 00:00:00
+date:          2019-08-20 00:00:00
 categories:    life
 tags:          general
 postcard-img:  "/assets/posts/PostCard-Life-SelfIntroduction300-3.png"
