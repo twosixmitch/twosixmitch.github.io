@@ -6,7 +6,7 @@ date:         2019-08-20 00:00:00
 categories:   life
 tags:         general
 post-img-src: "/assets/posts/2019-08-20-SelfIntroduction.png"
-post-img-alt: "Portrait image of a small child"
+post-img-alt: "portrait of a small child"
 ---
 Alright, some explanation is needed first. Many years ago, I was listening to a podcast where the guest said something along the lines of
 
