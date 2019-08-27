@@ -1,11 +1,12 @@
 ---
-layout:        post
-title:         "The baby who didn't want to be born - A self introduction"
-date:          2019-08-20 00:00:00
-categories:    life
-tags:          general
-postcard-img:  "/assets/posts/PostCard-Life-SelfIntroduction300-3.png"
-permalink:     /blog/:name
+layout:       post
+permalink:    /blog/:name
+title:        "The baby who didn't want to be born - A self introduction"
+date:         2019-08-20 00:00:00
+categories:   life
+tags:         general
+post-img-src: "/assets/posts/2019-08-20-SelfIntroduction.png"
+post-img-alt: "Portrait image of a small child"
 ---
 Alright, some explanation is needed first. Many years ago, I was listening to a podcast where the guest said something along the lines of
 
