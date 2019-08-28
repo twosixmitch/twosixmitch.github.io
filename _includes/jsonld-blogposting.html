@@ -9,7 +9,7 @@
   "dateModified": "{% if page.modified %}{{ page.modified }}{% else %}{{ page.date }}{% endif %}",
   "datePublished": "{{ page.date }}",
   "headline": "{{ page.title }}",
-  "description": "{{ page.excerpt | strip_html | strip }}",
+  "description": "{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | strip }}{% endif %}",
   "image": "{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}",
   "isAccessibleForFree": "True",
   "author": {% include jsonld-person.html %},

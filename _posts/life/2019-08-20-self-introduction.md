@@ -3,6 +3,7 @@ layout:         post
 permalink:      /blog/:name
 jsonld:         jsonld-blogposting
 title:          "The baby who didn't want to be born - A self introduction"
+description:    "An introduction to who I am and why I am starting a blog."
 date:           2019-08-20 00:00:00
 categories:     life
 tags:           general

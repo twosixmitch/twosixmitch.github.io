@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Blog - Mitchell Duncan
 permalink: /blog
 category: blog
 ---
