@@ -1,10 +1,9 @@
 # Site Settings
 title: Mitchell Duncan
 email: twosixmitch@gmail.com
-description: >
-  Blog site.
+description: Mitchell Duncan's website and blog
 baseurl: ""
-url: "http://twosixmitch.github.io"
+url: "https://twosixmitch.github.io"
 twitter_username: twosixmitch
 github_username:  twosixmitch
 # Build Settings
