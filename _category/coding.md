@@ -1,6 +1,6 @@
 ---
 title: Coding - Mitchell Duncan
 category: coding
-permalink: "/coding"
+permalink: /blog/coding
 layout: category
 ---

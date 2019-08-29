@@ -1,6 +1,6 @@
 ---
 title: Languages - Mitchell Duncan
 category: languages
-permalink: "/languages"
+permalink: /blog/languages
 layout: category
 ---

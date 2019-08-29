@@ -1,6 +1,6 @@
 ---
 title: Life - Mitchell Duncan
 category: life
-permalink: "/life"
+permalink: /blog/life
 layout: category
 ---
