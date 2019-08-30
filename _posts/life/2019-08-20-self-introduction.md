@@ -66,4 +66,4 @@ Beyond software development, my plans do get a little loose. Some of the other t
 
 This concludes my first post. A short one to cut the umbilical cord and see what happens. If you got this far, I want to say thank you for giving me your attention! More will come of this site as my life continues.
 
-<span class="whisper">Disclaimer: All mistakes in this blog are as intended and are not subject to change. Maybe.</span>
+<span class="whisper">Disclaimer: All mistakes in this blog are intended and are not subject to change. Maybe.</span>
