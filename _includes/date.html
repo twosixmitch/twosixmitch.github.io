@@ -1,4 +1,4 @@
-<p class="date">
+<time class="date">
     {% assign day = include.date | date: "%-d"  %}
     {% case day %}
         {% when '1' or '21' or '31' %}{{ day }}st
@@ -7,4 +7,4 @@
     {% else %}{{ day }}th
     {% endcase %}
     {{ include.date | date: " %B %Y" }}
-</p>
+</time>
