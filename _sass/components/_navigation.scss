@@ -36,12 +36,14 @@
       }
 
       .emoji {
-        font-size: 2rem;
-        padding: 0.5rem 0.5rem 0 0.5rem;
+        font-size: 1.5rem;
+        padding: 0.5rem;
       }
 
       .text {
-        display: none;
+        display: block;
+        font-weight: 600;
+        font-size: 1.1rem; 
       }
     }
   
@@ -85,7 +87,7 @@
       .brand {
         .emoji {
           font-size: 1.5rem;
-          padding: 0.5rem 1rem 0.25rem 0;
+          padding: 0.5rem;
         }
 
         .text {

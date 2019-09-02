@@ -2,14 +2,19 @@
  * Layout
  */
 
-#main-content {
-  margin-top: $nav-mobile-height;
-  padding: $padding 0 0;
+.main-content {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-top: $nav-mobile-height;
+  padding-bottom: $footer-mobile-height; /* height of your footer */
 }
 
 @include small-breakpoint {
-  #main-content {
-    margin-top: $nav-desktop-height;
+  .main-content {
+    padding-top: $nav-desktop-height;
+    padding-bottom: $footer-desktop-height;
   }
 }
 
@@ -33,7 +38,7 @@ iframe {
 
   header {
 
-    margin: 1rem 1rem 2rem 1rem;
+    margin: 2rem 1rem 2rem 1rem;
 
     .profile-intro {
       display: flex;
