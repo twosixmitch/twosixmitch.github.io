@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"
 
-bundle exec jekyll serve -l -o
+bundle exec jekyll serve -l -o --drafts

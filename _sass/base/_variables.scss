@@ -26,28 +26,36 @@ $desktop                  : $medium                                    !default;
 // Global Colors
 //==============================================================================
 
+$brand-color-blue         : #4FA5C7                                 !default;
+$brand-color-yellow       : #FFD200                                 !default;
+$brand-color-white        : #FFFFFF                                 !default;
+$brand-color-grey-light   : #e1e1e1                                 !default;
+$brand-color-grey-dark    : #404040                                 !default;
+
+$light                    : #f2f2f2                                  !default;
+$bold-blue                : #0366EE                                  !default;
+$bold-green               : #29de7d                                  !default;
+$bold-yellow              : #FED356                                  !default;
+$soft-yellow              : #ffeea8                                  !default;
+
 $background               : white                                    !default;
-$primary-color            : #0366EE                                  !default;
-$secondary-color          : #29de7d                                  !default;
+$primary-color            : $bold-blue                                 !default;
+$secondary-color          : $bold-yellow                               !default;
 $accent-color             : #cdcdcd                                  !default;
 $alternate-background     : #fafafa                                  !default;
 $alternate-color          : #404040                                  !default;
 $link-color               : $primary-color                             !default;
-$link-hover-color         : darken($link-color, 15%)                   !default;
+$link-hover-color         : $link-color                                !default;
 $highlight                : #ffeea8                                  !default;
 $error                    : #D33C40                                  !default;
-$bq-border                : 16px solid #f0f0f0                       !default;
-
-$light                    : #f2f2f2                                  !default;
-$green                    : #12C47C                                  !default;
-$yellow                   : #FED356                                  !default;
+$bq-border                : 16px solid #eeeeee                       !default;
 
 //==============================================================================
 // Typography
 //==============================================================================
 
 // Body
-$font-size                : 1rem                                       !default;
+$font-size                : 1.1rem                                       !default;
 $body-font-size           : 1rem                                       !default;
 $font-style               : normal                                     !default;
 $font-variant             : normal                                     !default;
@@ -60,7 +68,7 @@ $font-family              : -apple-system,
                             Helvetica, 
                             Arial, 
                             sans-serif                                 !default;
-$line-height              : 1.6                                        !default;
+$line-height              : 1.5                                        !default;
 
 // Headings
 $heading-font-color       : #404040 !default;
@@ -168,11 +176,13 @@ $caption                  : #ababab                                  !default;
 // Code
 //==============================================================================
 
-$code-color               : $font-color                                !default;
+$code-color               : #ffffff                                  !default;
 $code-size                : 14px                                       !default;
 $code-family              : Menlo, monospace                           !default;
-$code-background          : transparent                                !default;
-$code-borders             : $borders                                   !default;
+$code-background          : #242424                                  !default;
+$code-borders             : 2px solid $code-background                 !default;
+$code-box-shadow          : 3px 5px 20px rgba(0, 0, 0, 0.16)         !default;
+$code-border-radius       : 3px                                        !default;
 
 //==============================================================================
 // Navigation
@@ -193,18 +203,9 @@ $nav-font-color-alt-hover  : rgb(0, 0, 0)                            !default;
 
 $footer-background         : rgb(230, 230, 230)                      !default;
 $footer-desktop-height     : 65px                                      !default;
-$footer-mobile-height     : 65px                                      !default;
+$footer-mobile-height      : 65px                                      !default;
 $footer-width              : 850px                                     !default;
 $footer-font-color         : rgb(64, 64, 64)                         !default;
-
-//==============================================================================
-// Brand
-//==============================================================================
-
-$brand-color-blue          : #4FA5C7                                 !default;
-$brand-color-yellow        : #FFD200                                 !default;
-$brand-color-white         : #FFFFFF                                 !default;
-
 
 //==============================================================================
 // Post cards
@@ -214,3 +215,13 @@ $post-small-img-height : 64px                                          !default;
 $post-small-img-width  : 64px                                          !default;
 $post-large-img-height : 128px                                         !default;
 $post-large-img-width  : 128px                                         !default;
+
+//==============================================================================
+// Tooltips
+//==============================================================================
+
+$tipped_color          : $bold-blue                                    !default;
+$tooltip_color         : #404040                                     !default;
+$tooltip_font_color    : #fff                                        !default;
+$tooltip_border_radius : 3px                                           !default;
+$arrow_border_width    : 8px                                           !default;

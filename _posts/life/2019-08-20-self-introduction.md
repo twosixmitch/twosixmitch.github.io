@@ -20,7 +20,7 @@ This “blog” is that baby. It was an idea for a long time, but only now have 
 
 ## Who am I?
 
-My full name is Mitchell James Duncan. I am currently 29 years old and live in New Zealand. I work as a software developer/engineer/coder/programmer/employee for a [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) company. 
+My full name is Mitchell James Duncan. I am currently 29 years old and live in New Zealand. I work as a software developer / engineer / coder / programmer / employee for a [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) company. 
 
 I started my software career in game development before switching to web development. The reason for this and my general career history I am saving for another article. 
 

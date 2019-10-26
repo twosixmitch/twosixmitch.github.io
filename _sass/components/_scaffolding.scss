@@ -120,12 +120,15 @@ h5 {
 a {
   color: $link-color;
   text-decoration: none;
+  border-bottom: 1px solid $link-color;
 
   &:hover,
   &:active,
   &:focus {
     color: $link-hover-color;
     text-decoration: none;
+    border-bottom: 2px solid $link-hover-color;
+    
   }
 }
 
@@ -161,6 +164,10 @@ pre {
   font-family: $code-family;
   font-size: $code-size;
   margin: 0 0 $margins 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
   code {
     font-family: $code-family;
@@ -191,8 +198,8 @@ kbd {
   font-family: $code-family;
   font-size: $code-size;
   padding: 0 0.2rem;
-  border: $borders;
-  border-radius: $border-radius;
+  border: $code-borders;
+  border-radius: $code-border-radius;
 }
 
 // Line break

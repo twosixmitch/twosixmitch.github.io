@@ -38,86 +38,120 @@ iframe {
 
   header {
 
-    margin: 2rem 1rem 2rem 1rem;
-
     .profile-intro {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
-      margin: 1rem;
+      margin-top: 1.5rem;
     
       img {
-        max-width: 128px;
-        height: auto;
-        padding: 0 0.5rem;
+        max-width: 30%;
+        max-height: 30%;
+        padding: 0;
+        margin-right: 0.5rem;
       }
     
       h1 {
         margin: 0;
-        padding: 0 0.5rem;
+        padding: 0;
         font-weight: 600;
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
       }
     }
 
     .profile-bio {
+      margin-top: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    
-      margin: 0;
-      
+
       p {
-        margin-bottom: 0.5rem;
+        margin:0;
+        &:first-of-type {
+          margin-bottom: 0.5rem;
+        }
       }
     }
   }
 
+  .latest-posts {
+    margin-top: 1.5rem;
+
+    h2 {
+      margin: 0 0 1rem 0;
+    }
+  }
+
   .view-more {
-    margin-top: 1rem;
+    color: $font-color;
+    margin-right: 1rem;
     display: flex;
     flex-flow: column;
-    align-items: center;
+    align-items: flex-end;
+
+    a {
+      color: $font-color;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $font-color;
+        text-decoration: none;
+        border-bottom: 2px solid $font-color;
+      }
+    }
   }
 }
-
 
 
 @include small-breakpoint {
   .front-page {
     
     header {
-
-      margin: 3rem 1rem;
+      margin-top: 1.5rem;
 
       .profile-intro {
         margin: 0;
+        justify-content: center;
       
         img {
-          max-width: 200px;
+          max-width: 128px;
           height: auto;
-          padding: 0 1.5rem;
+          padding: 0;
         }
       
         h1 {
           margin: 0;
-          padding: 0 1.5rem;
+          padding: 0 1rem;
           font-weight: 600;
-          font-size: 4rem;
-          text-align: center;
+          font-size: 3rem;
         }
       }
 
       .profile-bio {
-        margin: 1.5rem 0 2rem 0;
+        margin: 1rem 0 1.5rem 0;
         
         p {
-          text-align: center;
           margin: 0;
+          padding: 0;
+          &:first-of-type {
+            margin-bottom: 0;
+          }
         }
+      }
+    }
+
+    .latest-posts {
+      margin-top: 2rem;
+  
+      h2 {
+        margin: 0 0 2rem 0;
       }
     }
   }
