@@ -9,7 +9,8 @@ category: blog
   <section class="section latest-posts">
     <h2>Latest posts</h2>
     <div class="posts-container">
-      {% for post in site.posts %}
+      {% assign posts = site.posts | where:'visible','true' %}
+      {% for post in posts %}
         {% include postcard.html %}        
       {% endfor %}
     </div>

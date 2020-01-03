@@ -7,15 +7,8 @@
   overflow: hidden;
   display: block;
   position: relative;
-  padding-top: $nav-mobile-height;
-  padding-bottom: $footer-mobile-height; /* height of your footer */
-}
-
-@include small-breakpoint {
-  .main-content {
-    padding-top: $nav-desktop-height;
-    padding-bottom: $footer-desktop-height;
-  }
+  padding-top: $nav-height;
+  padding-bottom: $footer-height; /* height of your footer */
 }
 
 .container {

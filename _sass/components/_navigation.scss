@@ -2,115 +2,62 @@
  * Navigation
  */
 
-.nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background: $nav-background;
-    transition: all 0.3s ease;
-    
-    .nav-container {
-      padding: 0 1.5rem;
-      height: $nav-mobile-height;
-      max-width: $nav-width;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: height 0.3s ease;
-    }
-  
-    .brand {
-      a {
-        display: flex;
-        align-items: center;
-        color: $nav-font-color;
-        border: none;
 
-        &:hover,
-        &:focus {
-          color: $nav-font-color-hover;
-          text-decoration: none;
-          border: none;
-        }
-      }
+nav {
+  position   : fixed;
+  width      : 100%;
+  top        : 0;
+  left       : 0;
+  z-index    : 3;
+  background : $nav-background;
+  transition : all 0.3s ease;
 
-      .emoji {
-        font-size: 1.5rem;
-        padding: 0.5rem;
-      }
-
-      .text {
-        display: block;
-        font-weight: 600;
-        font-size: 1.1rem; 
-      }
-    }
-  
-    .links {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        flex: 1;
-        margin: 0;
-  
-      a {
-        display: flex;
-        align-items: center;
-        font-size: 1.1rem;
-        font-weight: 500;
-        padding: 1rem 0.5rem 1rem 0.5rem;
-        margin: 0 0 0 0.5rem;
-        color: $nav-font-color-alt;
-        line-height: 1.2;
-        text-align: center;
-        border: none;
-  
-        &:hover,
-        &:focus {
-          color: $nav-font-color-alt-hover;
-          text-decoration: none;
-          border: none;
-        }
-      }
-
-      .logo {
-        max-width: 24px;
-        height: auto;
-      }
-    }
+  &.scroll {
+    box-shadow: 3px 2px 18px rgba(0, 0, 0, 0.1);
+  }
 }
 
-@include small-breakpoint {
-  .nav {
-    .nav-container {
-      height: $nav-desktop-height;
+nav .container {
+  padding         : 0 1.5rem;
+  height          : $nav-height;
+  max-width       : $nav-width;
+  margin          : auto;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  transition      : height 0.3s ease;
+}
 
-      .brand {
-        .emoji {
-          font-size: 1.5rem;
-          padding: 0.5rem;
-        }
+nav .container .brand a {
+  color       : $nav-font-color;
+  font-size   : $nav-font-size;
+  font-weight : $nav-font-weight;
+  border      : none;
 
-        .text {
-          display: block;
-          font-weight: 600;
-          font-size: 1.1rem;          
-        }
-      }
+  &:hover,
+  &:focus {
+    color : $nav-font-color-hover;
+  }
+}
 
-      .links {
-        display: flex;
-        flex-direction: row;
-        
+nav .container .links {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : flex-end;
+  flex            : 1;
+  margin          : 0;
 
-        a {
-          border: none;
-          font-size: 1.1rem;
-        }
-      }
+  a {
+    padding-bottom : 0.25em;
+    padding-left   : 0.25em;
+    color          : $nav-font-color-alt;
+    font-size      : $nav-font-size;
+    font-weight    : $nav-font-weight;
+    border         : none;
+
+    &:hover,
+    &:focus {
+      color : $nav-font-color-alt-hover;
     }
   }
 }

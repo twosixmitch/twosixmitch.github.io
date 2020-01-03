@@ -75,8 +75,11 @@
                     display: none;
                     margin: 0;
                     font-size: 75%;
-                    color: grey;
                     text-transform: uppercase;
+                    padding: $post-tags-padding;
+                    background: $post-tags-bg-color; 
+                    border-radius: $post-tags-radius;
+                    color: $post-tags-font-color;
                 }
             }
 

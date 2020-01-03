@@ -1,15 +1,27 @@
 <header>
-	<nav class="nav">
-		<div class="nav-container">
+	<nav id="nav">
+		<div class="container">
 			<div class="brand">
-				<a href="/">
-					<span class="emoji">👨🏻‍💻</span>
-					<span class="text">Mitchell Duncan</span>
-				</a>
+				<a href="/">👨🏻‍💻 Mitchell Duncan</a>
 			</div>
 			<div class="links">
 				<a href="/blog">Blog</a>
 			</div>
 		</div>
 	</nav>
+	<script>
+		window.addEventListener('scroll', this.navOnScroll)
+		
+		function navOnScroll () {
+			if (window.scrollY > 20) {
+				var navElement = document.getElementById("nav")
+				if (!navElement.classList.contains("scroll"))
+				{
+					navElement.classList.add("scroll");
+				}
+			} else {
+				document.getElementById("nav").classList.remove("scroll");
+			}
+  	}
+	</script>
 </header>

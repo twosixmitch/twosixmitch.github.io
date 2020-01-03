@@ -44,7 +44,11 @@ article {
         }
 
         .tags {
+          padding: $post-tags-padding;
+          border-radius: $post-tags-radius;
           text-transform: uppercase;
+          background: $post-tags-bg-color;
+          color: $post-tags-font-color;
         }
 
         p {
