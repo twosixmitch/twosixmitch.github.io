@@ -5,10 +5,17 @@
 		</a>
 	</div>
 	<div class="details">
-		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+		<h3 class="title">
+			<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		</h3>
 		<div class="meta">
 			{% include date.html date=post.date %}
-			<div class="tags">{{ post.categories }}</div>
+			<div class="tags">
+				{% assign categories = post.categories %}
+				{% for category in categories %}
+						{% include post-tag.html category=category %}        
+				{% endfor %}
+		  </div>
 		</div>
 		<div class="excerpt">{{ post.excerpt | strip_html | truncatewords:25 }}</div>
 	</div>

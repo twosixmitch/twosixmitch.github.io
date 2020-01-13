@@ -2,38 +2,30 @@
  * Footer
  */
 
-.footer {    
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: $footer-height;
-  background: $footer-background;
+footer {    
+  position   : absolute;
+  bottom     : 0;
+  width      : 100%;
+  height     : $footer-height;
+  background : $footer-background;
+}
 
-  .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    margin: 0;
-    padding: 0;
+footer .links {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  align-items     : center;
+  flex            : 1;
+}
 
-    a {
-      padding: 1rem 0.5rem 1rem 0.5rem;
-      margin: 0 1rem 0 1rem;
-      border: none;
-      
-      &:hover,
-      &:focus {
-        color: $nav-font-color-alt-hover;
-        text-decoration: none;
-        border: none;
-      }
-    }
+footer .links a {
+  padding      : 1rem 0.5rem 1rem 0.5rem;
+  margin-left  : 1rem;
+  margin-right : 1rem;
+  border       : none;
+}
 
-    .logo {
-      max-width: 24px;
-      height: auto;
-    }
-  }
+footer .links .logo {
+  max-width : 24px;
+  height    : auto;
 }

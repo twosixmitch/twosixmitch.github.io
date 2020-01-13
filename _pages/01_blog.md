@@ -11,7 +11,7 @@ category: blog
     <div class="posts-container">
       {% assign posts = site.posts | where:'visible','true' %}
       {% for post in posts %}
-        {% include postcard.html %}        
+        {% include post-card.html %}        
       {% endfor %}
     </div>
   </section>

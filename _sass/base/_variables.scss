@@ -60,7 +60,7 @@ $body-font-size           : 1rem                                       !default;
 $font-style               : normal                                     !default;
 $font-variant             : normal                                     !default;
 $font-weight              : normal                                     !default;
-$font-color               : #404040                                  !default;
+$font-color               : $brand-color-grey-dark                                !default;
 $light-font-color         : rgba(0, 0, 0, 0.6)                       !default;
 $font-family              : -apple-system, 
                             BlinkMacSystemFont, 
@@ -71,7 +71,7 @@ $font-family              : -apple-system,
 $line-height              : 1.5                                        !default;
 
 // Headings
-$heading-font-color       : #404040                                  !default;
+$heading-font-color       : $brand-color-grey-dark                               !default;
 $heading-font-weight      : 600                                        !default;
 $heading-font-family      : -apple-system, 
                             BlinkMacSystemFont, 
@@ -211,15 +211,16 @@ $footer-font-color         : rgb(64, 64, 64)                         !default;
 // Post cards
 //==============================================================================
 
-$post-small-img-height : 64px                                          !default;
-$post-small-img-width  : 64px                                          !default;
-$post-large-img-height : 128px                                         !default;
-$post-large-img-width  : 128px                                         !default;
-$post-tags-bg-color    : $brand-color-grey-light                       !default;
-$post-tags-font-color  : $brand-color-grey-dark                        !default;
-$post-tags-border      : 1px solid $post-tags-bg-color                 !default;
-$post-tags-padding     : 0 5px 0 5px                                   !default;
-$post-tags-radius      : 3px                                           !default;
+$post-small-img-height      : 64px                                     !default;
+$post-small-img-width       : 64px                                     !default;
+$post-large-img-height      : 128px                                    !default;
+$post-large-img-width       : 128px                                    !default;
+$post-tags-bg-color         : $brand-color-grey-light                  !default;
+$post-tags-font-color       : $brand-color-grey-dark                   !default;
+$post-tags-font-color-hover : black                                  !default;
+$post-tags-border           : 1px solid $post-tags-bg-color            !default;
+$post-tags-padding          : 5px 5px 5px 5px                          !default;
+$post-tags-radius           : 3px                                      !default;
 //==============================================================================
 // Tooltips
 //==============================================================================
