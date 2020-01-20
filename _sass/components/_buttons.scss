@@ -108,3 +108,21 @@ a.full-button {
   display: block;
   width: 100%;
 }
+
+// Square buttons
+.tag-button,
+a.tag-button {
+  background    : $brand-color-grey-light;
+  border        : $brand-color-grey-light;
+  color         : $brand-color-grey-dark;
+  padding       : 0.3em 1em;
+  font-weight   : normal;
+  border-radius : 3px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color      : black;
+    background : darken($brand-color-grey-light, 10%);
+  }
+}

@@ -56,20 +56,21 @@ article header .details .meta {
 .post-tag {
   display        : block;
   text-transform : uppercase;
-  background     : $post-tags-bg-color;
-  border-radius  : 3px;
   padding-top    : 1px;
   padding-bottom : 1px;
 
   a {
-    padding     : $post-tags-padding;
+    background  : $post-tags-bg-color;
+    padding     : 0.25em 0.5em;
     color       : $post-tags-font-color;
     border      : none;
     font-weight : 500;
+    border-radius  : 3px;
 
     &:hover,
     &:focus {
-      color : $post-tags-font-color-hover;
+      color      : black;
+      background : darken($post-tags-bg-color, 10%);
     }
   }
 }

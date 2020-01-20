@@ -30,10 +30,11 @@ $brand-color-blue         : #4FA5C7                                  !default;
 $brand-color-yellow       : #FFD200                                  !default;
 $brand-color-white        : #FFFFFF                                  !default;
 $brand-color-grey-light   : #e1e1e1                                  !default;
+$brand-color-grey-norm    : #808080                                  !default;
 $brand-color-grey-dark    : #404040                                  !default;
 
 $light                    : #f2f2f2                                  !default;
-$bold-blue                : #0366EE                                  !default;
+$bold-blue                : rgb(38, 155, 201)                                 !default;
 $bold-green               : #29de7d                                  !default;
 $bold-yellow              : #FED356                                  !default;
 $soft-yellow              : #ffeea8                                  !default;
@@ -219,7 +220,6 @@ $post-tags-bg-color         : $brand-color-grey-light                  !default;
 $post-tags-font-color       : $brand-color-grey-dark                   !default;
 $post-tags-font-color-hover : black                                  !default;
 $post-tags-border           : 1px solid $post-tags-bg-color            !default;
-$post-tags-padding          : 5px 5px 5px 5px                          !default;
 $post-tags-radius           : 3px                                      !default;
 //==============================================================================
 // Tooltips
