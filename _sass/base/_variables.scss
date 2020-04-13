@@ -37,7 +37,7 @@ $brand-color-black        : #0000                                    !default;
 $brand-color-white        : #ffff                                    !default;
 
 $light                    : #f2f2f2                                  !default;
-$bold-blue                : rgb(38, 155, 201)                                 !default;
+$bold-blue                : rgb(38, 155, 201)                        !default;
 $bold-green               : #29de7d                                  !default;
 $bold-yellow              : #FED356                                  !default;
 $soft-yellow              : #ffeea8                                  !default;
@@ -196,9 +196,9 @@ $nav-background            : $brand-color-white                        !default;
 $nav-height                : 65px                                      !default;
 $nav-width                 : 850px                                     !default;
 $nav-font-color            : $brand-color-grey-dark                    !default;
-$nav-font-color-hover      : $brand-color-black                        !default;
+$nav-font-color-hover      : black                                   !default;
 $nav-font-color-alt        : $brand-color-grey-dark                    !default;
-$nav-font-color-alt-hover  : $brand-color-black                        !default;
+$nav-font-color-alt-hover  : black                                   !default;
 $nav-font-weight           : 500                                       !default;
 $nav-font-size             : 1.25em                                    !default;
 
