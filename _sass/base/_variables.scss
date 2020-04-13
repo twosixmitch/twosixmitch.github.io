@@ -29,9 +29,12 @@ $desktop                  : $medium                                    !default;
 $brand-color-blue         : #4FA5C7                                  !default;
 $brand-color-yellow       : #FFD200                                  !default;
 $brand-color-white        : #FFFFFF                                  !default;
-$brand-color-grey-light   : #e1e1e1                                  !default;
+$brand-color-grey-light   : #ececec                                  !default;
 $brand-color-grey-norm    : #808080                                  !default;
 $brand-color-grey-dark    : #404040                                  !default;
+
+$brand-color-black        : #0000                                    !default;
+$brand-color-white        : #ffff                                    !default;
 
 $light                    : #f2f2f2                                  !default;
 $bold-blue                : rgb(38, 155, 201)                                 !default;
@@ -140,8 +143,8 @@ $button-text-transform    : none                                       !default;
 
 // Accent buttons
 $accent-button-background : $secondary-color                           !default;
-$accent-button-color      : #ffffff                                  !default;
-$accent-button-color-hover: #ffffff                                  !default;
+$accent-button-color      : $brand-color-white                         !default;
+$accent-button-color-hover: $brand-color-white                         !default;
 
 // Muted Buttons
 $muted-border             : 1px solid $accent-color                    !default;
@@ -177,7 +180,7 @@ $caption                  : #ababab                                  !default;
 // Code
 //==============================================================================
 
-$code-color               : #ffffff                                  !default;
+$code-color               : $brand-color-white                         !default;
 $code-size                : 14px                                       !default;
 $code-family              : Menlo, monospace                           !default;
 $code-background          : #242424                                  !default;
@@ -189,24 +192,24 @@ $code-border-radius       : 3px                                        !default;
 // Navigation
 //==============================================================================
 
-$nav-background            : rgb(256, 256, 256)                        !default;
+$nav-background            : $brand-color-white                        !default;
 $nav-height                : 65px                                      !default;
 $nav-width                 : 850px                                     !default;
-$nav-font-color            : #404040                                 !default;
-$nav-font-color-hover      : rgb(0, 0, 0)                            !default;
-$nav-font-color-alt        : #404040                                 !default;
-$nav-font-color-alt-hover  : rgb(0, 0, 0)                            !default;
+$nav-font-color            : $brand-color-grey-dark                    !default;
+$nav-font-color-hover      : $brand-color-black                        !default;
+$nav-font-color-alt        : $brand-color-grey-dark                    !default;
+$nav-font-color-alt-hover  : $brand-color-black                        !default;
 $nav-font-weight           : 500                                       !default;
-$nav-font-size             : 1.25em                                     !default;
+$nav-font-size             : 1.25em                                    !default;
 
 //==============================================================================
 // Footer
 //==============================================================================
 
-$footer-background         : rgb(230, 230, 230)                      !default;
+$footer-background         : $brand-color-grey-light                   !default;
 $footer-height             : 65px                                      !default;
 $footer-width              : 850px                                     !default;
-$footer-font-color         : rgb(64, 64, 64)                         !default;
+$footer-font-color         : $brand-color-grey-norm                    !default;
 
 //==============================================================================
 // Post cards
@@ -218,15 +221,16 @@ $post-large-img-height      : 128px                                    !default;
 $post-large-img-width       : 128px                                    !default;
 $post-tags-bg-color         : $brand-color-grey-light                  !default;
 $post-tags-font-color       : $brand-color-grey-dark                   !default;
-$post-tags-font-color-hover : black                                  !default;
+$post-tags-font-color-hover : $brand-color-black                       !default;
 $post-tags-border           : 1px solid $post-tags-bg-color            !default;
 $post-tags-radius           : 3px                                      !default;
+
 //==============================================================================
 // Tooltips
 //==============================================================================
 
 $tipped_color          : $bold-blue                                    !default;
-$tooltip_color         : #404040                                     !default;
-$tooltip_font_color    : #fff                                        !default;
+$tooltip_color         : $brand-color-grey-dark                        !default;
+$tooltip_font_color    : $brand-color-white                            !default;
 $tooltip_border_radius : 3px                                           !default;
 $arrow_border_width    : 8px                                           !default;
