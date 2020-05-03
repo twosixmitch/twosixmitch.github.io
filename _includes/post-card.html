@@ -6,17 +6,23 @@
 	</div>
 	<div class="details">
 		<h3 class="title">
-			<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+			<a href="{{ post.url | prepend: site.baseurl }}">{{- post.title -}}</a>
 		</h3>
 		<div class="meta">
-			{% include date.html date=post.date %}
+			{%- include date.html date=post.date -%}
+			<p class="separator">·</p>
+			<div class="read-time">{%- include post-card-readtime.html -%}</div>
 			<div class="tags">
-				{% assign categories = post.categories %}
-				{% for category in categories %}
-						{% include post-tag.html category=category %}        
-				{% endfor %}
+				{%- assign categories = post.categories -%}
+				{%- for category in categories -%}
+						{%- include post-tag.html category=category -%}        
+				{%- endfor -%}
 		  </div>
 		</div>
-		<div class="excerpt">{{ post.excerpt | strip_html | truncatewords:25 }}</div>
+		{%- if post.use-excerpt -%}
+		<div class="excerpt">{{- post.excerpt | strip_html | truncatewords:25 -}}...</div>
+		{%- else -%}
+		<div class="excerpt">{{- post.subtitle | strip_html | truncatewords:25 -}}</div>
+		{%- endif -%}
 	</div>
 </div>

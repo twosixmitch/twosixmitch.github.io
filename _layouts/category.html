@@ -1,25 +1,25 @@
 ---
-layout: default
+layout: page
 ---
 <div class="container">
-  {% include blog-header.html %}
+  {%- include blog-header.html -%}
   <section class="section latest-posts">
-    {% assign posts = site.categories[page.category] | where:'visible','true' %}
-    {% if posts.size > 0 %}
+    {%- assign posts = site.categories[page.category] | where:'visible','true' -%}
+    {%- if posts.size > 0 -%}
     
     <h2>Latest posts</h2>
     <div class="posts-container">
       
-      {% for post in posts %}
-        {% include post-card.html %}
-      {% endfor %}
+      {%- for post in posts -%}
+        {%- include post-card.html -%}
+      {%- endfor -%}
     </div>
     
-    {% else %}
+    {%- else -%}
 
     <h2>Latest posts</h2>
     <p>Sorry, no posts available yet.</p>
 
-    {% endif %}
+    {%- endif -%}
   </section>
 </div>

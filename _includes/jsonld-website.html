@@ -2,12 +2,12 @@
 {
   "@context": "http://schema.org",
   "@type": "WebSite",
-  "url": "{{ prepend: site.baseurl | prepend: site.url }}",
-  "headline": "{{ site.title }}",
-  "name": "{{ site.title }}",
-  "alternateName": "{{ site.title }}",
-  "about": "{{ site.description }}",
+  "url": "{{- prepend: site.baseurl | prepend: site.url -}}",
+  "headline": "{{- site.title -}}",
+  "name": "{{- site.title -}}",
+  "alternateName": "{{- site.title -}}",
+  "about": "{{- site.description -}}",
   "image": ["https://twosixmitch.github.io/assets/images/profile_headshot.png"],
-  "publisher": {% include jsonld-person.html %}
+  "publisher": {%- include jsonld-person.html -%}
 }
 </script>

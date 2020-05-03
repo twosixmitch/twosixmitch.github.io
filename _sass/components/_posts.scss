@@ -43,6 +43,17 @@ article header .details .meta {
     margin-right : 0.5em;
     margin-top   : 0.1em;
   }
+
+  .read-time {
+    margin-right : 0.5em;
+    margin-top   : 0.1em;
+  }
+
+  .separator {
+    margin-right : 0.5em;
+    margin-top   : 0.1em;
+    font-weight  : bold;
+  }
 }
 
 @include small-breakpoint {
@@ -73,4 +84,27 @@ article header .details .meta {
       background : darken($post-tags-bg-color, 10%);
     }
   }
+}
+
+/* Post Side Nav */
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  left: 10px;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
 }

@@ -1,15 +1,15 @@
 ---
-layout:         post
+layout:         page-post-contents
 permalink:      /blog/:name
 jsonld:         jsonld-blogposting
 title:          "The baby who didn't want to be born - A self introduction"
-description:    "An introduction to who I am and why I am starting a blog."
 date:           2019-08-20 00:00:00
 categories:     life
 tags:           general
 thumbnail:      "/assets/posts/2019-08-20-SelfIntroduction.png"
 thumbnail-desc: "portrait of a small child"
 visible:        true
+use-excerpt:    true
 ---
 Alright, some explanation is needed first. Many years ago, I was listening to a podcast where the guest said something along the lines of
 

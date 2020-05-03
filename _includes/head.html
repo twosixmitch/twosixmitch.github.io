@@ -9,27 +9,27 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-	{% if page.layout == "post" %}
-	<meta name="image" content="{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}">
-	{% else %}
+	<title>{%- if page.title -%}{{- page.title -}}{%- else -%}{{- site.title -}}{%- endif -%}</title>
+	<meta name="description" content="{%- if page.description -%}{{- page.description -}}{%- else -%}{{- site.description -}}{%- endif -%}">
+	{%- if page.layout == "post" -%}
+	<meta name="image" content="{{- page.thumbnail | prepend: site.baseurl | prepend: site.url -}}">
+	{%- else -%}
 	<meta name="image" content="https://twosixmitch.github.io/assets/images/profile_headshot.png">
-	{% endif %}
-	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" >
-	{% if page.layout == "post" %}
+	{%- endif -%}
+	<meta property="og:url" content="{{- page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url -}}">
+  <meta property="og:title" content="{%- if page.title -%}{{- page.title -}}{%- else -%}{{- site.title -}}{%- endif -%}">
+  <meta property="og:description" content="{%- if page.description -%}{{- page.description -}}{%- else -%}{{- site.description -}}{%- endif -%}" >
+	{%- if page.layout == "post" -%}
 	<meta property="og:type" content="article">
-	<meta property="og:image" content="{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}">
-	{% else %}
+	<meta property="og:image" content="{{- page.thumbnail | prepend: site.baseurl | prepend: site.url -}}">
+	{%- else -%}
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://twosixmitch.github.io/assets/images/profile_headshot.png">
-	{% endif %}
+	{%- endif -%}
 	<link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
-	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	{% if page.jsonld %}
-	{% include {{page.jsonld}}.html %}
-	{% endif %}
+	<link rel="stylesheet" href="{{- "/css/main.css" | prepend: site.baseurl -}}">
+	<link rel="canonical" href="{{- page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url -}}">
+	{%- if page.jsonld -%}
+	{%- include {{-page.jsonld-}}.html -%}
+	{%- endif -%}
 </head> 
