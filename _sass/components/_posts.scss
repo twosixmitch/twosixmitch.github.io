@@ -37,30 +37,26 @@ article header .details .title {
 article header .details .meta {
   display        : flex;
   flex-direction : row;
-  font-size      : 0.7em;
+  font-size      : 0.7rem;
 
   .date {
-    margin-right : 0.5em;
-    margin-top   : 0.1em;
+    margin-right : 0.4rem;
+    margin-top   : 0.1rem;
   }
 
   .read-time {
-    margin-right : 0.5em;
-    margin-top   : 0.1em;
+    margin-right : 0.4rem;
+    margin-top   : 0.1rem;
   }
 
   .separator {
-    margin-right : 0.5em;
-    margin-top   : 0.1em;
+    margin-right : 0.4rem;
+    margin-top   : 0.1rem;
     font-weight  : bold;
   }
-}
 
-@include small-breakpoint {
-  article header .graphic  {
-    width     : $post-large-img-width;
-    height    : $post-large-img-height;
-    min-width : $post-large-img-width;
+  .tags {
+    margin-left : 0.1rem;
   }
 }
 
@@ -83,6 +79,14 @@ article header .details .meta {
       color      : black;
       background : darken($post-tags-bg-color, 10%);
     }
+  }
+}
+
+@include small-breakpoint {
+  article header .graphic  {
+    width     : $post-large-img-width;
+    height    : $post-large-img-height;
+    min-width : $post-large-img-width;
   }
 }
 
