@@ -27,10 +27,11 @@
   border: none;
   border-radius: 3px;
   font-weight: normal;
+  background: $brand-color-grey-light;
 
   &:hover,
   &:focus {
-    background: $brand-color-grey-light;
+    background: darken($post-tags-bg-color, 10%);
   }
 
   &.active {

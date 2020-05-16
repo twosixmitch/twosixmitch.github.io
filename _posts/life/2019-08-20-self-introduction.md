@@ -6,7 +6,7 @@ title:          "The baby who didn't want to be born - A self introduction"
 date:           2019-08-20 00:00:00
 categories:     life
 tags:           general
-thumbnail:      "/assets/posts/2019-08-20-SelfIntroduction.png"
+thumbnail:      "/assets/posts/life/self-intro.png"
 thumbnail-desc: "portrait of a small child"
 visible:        true
 use-excerpt:    true
