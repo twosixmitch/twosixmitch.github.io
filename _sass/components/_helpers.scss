@@ -50,10 +50,45 @@
   justify-content: center;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Responsive images
 .responsive-image {
   max-width: 100%;
   height: auto;
+}
+
+// Max sizes
+.max-width-100 {
+  max-width: 100px;
+}
+
+.max-width-200 {
+  max-width: 200px;
+}
+
+.max-width-300 {
+  max-width: 300px;
+}
+
+.max-width-400 {
+  max-width: 400px;
+}
+
+.max-width-500 {
+  max-width: 500px;
+}
+
+.max-width-600 {
+  max-width: 600px;
+}
+
+.max-width-700 {
+  max-width: 700px;
 }
 
 // Display State

@@ -14,7 +14,9 @@ sass:
 include: ['_pages']
 kramdown:
   input: GFM
-
+  syntax_highlighter_opts:
+    disable : true
+    
 collections:
   category:
     output: true
