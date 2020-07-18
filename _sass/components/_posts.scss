@@ -90,6 +90,19 @@ article header .details .meta {
   }
 }
 
+.post-img {
+  border: none;
+  // center
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover,
+  &:focus {
+    border: none;
+  }
+}
+
 /* Post Side Nav */
 
 .sidenav {
@@ -111,4 +124,54 @@ article header .details .meta {
 
 .sidenav a:hover {
   color: #064579;
+}
+
+/* Anchor Links */
+
+.anchor {
+  position: absolute;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  visibility: hidden;
+  opacity: 0;
+  text-decoration: none;
+  border: none;
+}
+
+*:hover > .anchor {
+  visibility: visible;
+  opacity: 0.75;
+  transition: all 0.16s linear;
+}
+
+*:hover > .anchor:hover,
+*:hover > .anchor:focus {
+  opacity: 1;
+  text-decoration: none;
+  border: none;
+}
+
+/* Offsetting an html anchor to adjust for fixed header */
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+  scroll-margin-top: 3.75em;
+}
+
+@include small-breakpoint {
+
+  .icon-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  h2[id],
+  h3[id],
+  h4[id],
+  h5[id],
+  h6[id] {
+    scroll-margin-top: 2.75em;
+  }
 }
