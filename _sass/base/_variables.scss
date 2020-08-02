@@ -179,74 +179,81 @@ $code-color               : $brand-color-white                         !default;
 $code-color-inline        : $brand-color-purple                        !default;
 $code-size                : 16px                                       !default;
 $code-family              : Menlo, monospace                           !default;
-$code-background          : #2e2e2e                                  !default;
-$code-borders             : 2px solid $code-background                 !default;
 $code-box-shadow          : 3px 5px 20px rgba(0, 0, 0, 0.16)         !default;
 $code-border-radius       : 3px                                        !default;
 
+$code-color-background      : #272727                                !default;
+$code-color-comments        : #ffffff72                              !default;
+$code-color-punctuation     : #ffffff                                !default;
 
-$code-color-comments        : #ffffff72 !default;
-$code-color-punctuation     : #ffffff !default;
+$code-color-class           : #1296c2                                !default;
+$code-color-class-inherited : #1296c2                                !default;
+$code-color-function        : #ffc857ff                              !default;
+$code-color-keyword         : darken($code-color-class, 5%)            !default;
+$code-color-literal-string  : #f25f5cff                              !default;
+$code-color-literal-integer : #8ac926ff                              !default;
+$code-color-literal-boolean : #9257ff                                !default;
 
-$code-color-classname       : #ffca3aff !default;
-$code-color-keyword         : rgb(29, 141, 211) !default;
-$code-color-literal-string  : #ff595eff !default;
-$code-color-literal-integer : #8ac926ff !default;
-$code-color-literal-boolean : rgb(122, 88, 170) !default;
+$code-borders             : 2px solid $code-color-background           !default;
+
+/* SCSS HEX */
+$cg-red: #db3a34ff;
+$midnight-green-eagle-green: #084c61ff;
+$metallic-seaweed: #177e89ff;
+$maximum-yellow-red: #ffc857ff;
+$jet: #323031ff;
+
+
+/* SCSS HEX */
+$davys-grey: #50514fff;
+$fire-opal: #f25f5cff;
+$green-sheen: #70c1b3ff;
+$celadon-blue: #247ba0ff;
+$naples-yellow: #ffe066ff;
+
+/* Palette */
+$sizzling-red: #ff595eff;
+$yellow-green: #8ac926ff;
+$green-blue-crayola: #1982c4ff;
+$sunglow: #ffca3aff;
+$royal-purple: #6a4c93ff;
+
+
+/* SCSS HEX */
+$paradise-pink: #ee4266ff;
+$caribbean-green: #3bceacff;
+$go-green: #0ead69ff;
+$sunglow: #ffd23fff;
+$blue-violet-color-wheel: #540d6eff;
+
+
+/* SCSS HEX */
+$paradise-pink: #ef476fff;
+$caribbean-green: #06d6a0ff;
+$blue-ncs: #118ab2ff;
+$orange-yellow-crayola: #ffd166ff;
+$midnight-green-eagle-green: #073b4cff;
+
+
+
+/* SCSS HEX */
+$burnt-sienna: #e76f51ff;
+$persian-green: #2a9d8fff;
+$charcoal: #264653ff;
+$orange-yellow-crayola: #e9c46aff;
+$sandy-brown: #f4a261ff;
 
 
 /* old
-$code-color-classname       : #ffd200 !default;
+$code-color-background      : #2e2e2e !default;
+$code-color-class           : #ffd200 !default;
 $code-color-keyword         : #04b4ff !default;
 $code-color-punctuation     : #ffffff !default;
 $code-color-literal-string  : #d4518c !default;
 $code-color-literal-integer : #49c701 !default;
 $code-color-literal-boolean : #49c701 !default;
 $code-color-comments        : #ffffff72 !default;
-*/
-
-/* Palette */
-$sizzling-red: #ff595eff;
-$sunglow: #ffca3aff;
-$yellow-green: #8ac926ff;
-$green-blue-crayola: #1982c4ff;
-$royal-purple: #6a4c93ff;
-
-/* SCSS HEX */
-$davys-grey: #50514fff;
-$fire-opal: #f25f5cff;
-$naples-yellow: #ffe066ff;
-$celadon-blue: #247ba0ff;
-$green-sheen: #70c1b3ff;
-
-/* SCSS HEX */
-$blue-violet-color-wheel: #540d6eff;
-$paradise-pink: #ee4266ff;
-$sunglow: #ffd23fff;
-$caribbean-green: #3bceacff;
-$go-green: #0ead69ff;
-
-/* SCSS HEX */
-$paradise-pink: #ef476fff;
-$orange-yellow-crayola: #ffd166ff;
-$caribbean-green: #06d6a0ff;
-$blue-ncs: #118ab2ff;
-$midnight-green-eagle-green: #073b4cff;
-
-/* SCSS HEX */
-$metallic-seaweed: #177e89ff;
-$midnight-green-eagle-green: #084c61ff;
-$cg-red: #db3a34ff;
-$maximum-yellow-red: #ffc857ff;
-$jet: #323031ff;
-
-/* SCSS HEX */
-$charcoal: #264653ff;
-$persian-green: #2a9d8fff;
-$orange-yellow-crayola: #e9c46aff;
-$sandy-brown: #f4a261ff;
-$burnt-sienna: #e76f51ff;
-
+//*/
 
 
 //==============================================================================

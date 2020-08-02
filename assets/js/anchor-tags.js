@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   
-  var headings = document.querySelectorAll('.post-content > h2');
+  var headings = document.querySelectorAll('.post-content > h2, .post-content > h3');
 
   headings.forEach(heading => {
     

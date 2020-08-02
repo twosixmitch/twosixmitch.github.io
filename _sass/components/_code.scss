@@ -24,7 +24,7 @@ kbd {
 pre {
   border        : 0;
   border-radius : $border-radius;
-  background    : $code-background;
+  background    : $code-color-background;
   padding       : 1rem;
   tab-size      : 2;
   color         : $code-color;
@@ -71,6 +71,8 @@ pre[class*="language-"] {
   }
 }
 
+// Syntax highlighting
+
 .token.important,
 .token.bold {
   font-weight: bold;
@@ -82,7 +84,6 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
-
 
 .token.entity,
 .token.url,
@@ -142,7 +143,55 @@ pre[class*="language-"] {
   }
 }
 
-.token.function,
+.token.function{
+  color: $code-color-function;
+}
+
 .token.class-name {
-  color: $code-color-classname;
+  color: $code-color-class;
+}
+
+.token.type-list {
+  .token.class-name{
+    color: $code-color-class-inherited;
+  }
+}
+
+// Filename headers
+
+.filename {
+  padding: 0.5rem 1rem 0.75rem;
+  
+  margin-bottom: -0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: $code-family;
+  font-size: $code-size;
+  line-height: 1.8;
+  
+  background-color: black;
+  
+  z-index: 1;
+
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+
+  a {
+    color: white;
+    border: none;
+  }
+
+  img {
+    max-width: 16px;
+  }
+
+  p {
+    display: inline;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid white;
+    }
+  }
 }

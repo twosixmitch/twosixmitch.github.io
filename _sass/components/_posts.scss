@@ -175,3 +175,19 @@ h6[id] {
     scroll-margin-top: 2.75em;
   }
 }
+
+.note {
+  margin        : 0 0 1.5rem 0;
+  border        : 2px solid #68a9ff;
+  border-left   : 16px solid #68a9ff;
+  border-radius : 3px;
+  padding       : 1em 1em;
+}
+
+.warning {
+  margin        : 0 0 1.5rem 0;
+  border        : 2px solid #ff6d68;
+  border-left   : 16px solid #ff6d68;
+  border-radius : 3px;
+  padding       : 1em 1em;
+}
