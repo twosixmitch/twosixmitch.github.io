@@ -21,7 +21,7 @@
   display: block;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .blog-header ul li a {
@@ -33,6 +33,10 @@
   font-weight: normal;
   background: $brand-color-grey-light;
   white-space: nowrap;
+
+  .emoji {
+    display: inline-block;
+  }
 
   &:hover,
   &:focus {
