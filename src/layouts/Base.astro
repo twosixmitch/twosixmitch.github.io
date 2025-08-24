@@ -1,0 +1,101 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { SITE, SITE_CONFIG } from '../config.js';
+import { getAsset } from 'astro:assets';
+import { Image } from 'astro:assets';
+// Icon component removed - using text instead
+import Header from '../components/Header.astro';
+// Footer component removed
+import SEO from '../components/SEO.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: URL | string;
+  noindex?: boolean;
+  noimageindex?: boolean;
+  type?: 'website' | 'article';
+  publishDate?: Date;
+  modifiedDate?: Date;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
+const {
+  title,
+  description = SITE.description,
+  image,
+  canonicalURL,
+  noindex = false,
+  noimageindex = false,
+  type = 'website',
+  publishDate,
+  modifiedDate,
+  author,
+  section,
+  tags = [],
+} = Astro.props;
+
+const canonicalURLString = canonicalURL ? new URL(canonicalURL, Astro.url).href : Astro.url.href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURLString} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      canonicalURL={canonicalURLString}
+      noindex={noindex}
+      noimageindex={noimageindex}
+      type={type}
+      publishDate={publishDate}
+      modifiedDate={modifiedDate}
+      author={author}
+      section={section}
+      tags={tags}
+    />
+    <ViewTransitions />
+  </head>
+  <body class="bg-white dark:bg-secondary-900">
+    <div class="wrapper">
+      <Header />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-size: 224px;
+    /* Prevent layout shift from scrollbar */
+    overflow-y: scroll;
+  }
+  code {
+    background-color: rgba(115, 115, 115, 0.1);
+    color: #fff;
+  }
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+  }
+</style>

@@ -1,0 +1,175 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Manual frontmatter since import doesn't work as expected
+const frontmatter = {
+  title: "A practical guide to game development with MVCS",
+  subtitle: "How I built a game in Unity from scratch by adapting well-known software design patterns into something new!",
+  description: "Game development in Unity using the MVCS software design pattern",
+  date: "2021-03-07",
+  categories: ["coding"],
+  tags: ["general", "unity", "game-development", "mvcs"],
+  excerpt: "In 2018, my partner and I decided to build an app together in Unity. The result was Fit Me Challenges, an app aimed at taking on small fitness challenges with a slight gamified twist."
+};
+---
+
+<Base 
+  title={frontmatter.title} 
+  description={frontmatter.excerpt}
+>
+  <article class="max-w-4xl mx-auto px-4 py-20">
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl font-bold text-secondary-900 dark:text-white mb-4">
+        {frontmatter.title}
+      </h1>
+      <div class="flex items-center justify-center text-secondary-600 dark:text-secondary-400 space-x-4">
+        <span>📅 {new Date(frontmatter.date).toLocaleDateString()}</span>
+        <span>🏷️ {frontmatter.categories.join(', ')}</span>
+      </div>
+      {frontmatter.subtitle && (
+        <p class="text-xl text-secondary-600 dark:text-secondary-300 mt-4 max-w-3xl mx-auto">
+          {frontmatter.subtitle}
+        </p>
+      )}
+    </header>
+    
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <div class="markdown-content">
+        <p>In 2018, my partner and I decided to build an app together in <a href="https://unity.com/">Unity</a>. The result was <a href="https://play.google.com/store/apps/details?id=com.chuncan.fitmechallenges">Fit Me Challenges</a>, an app aimed at taking on small fitness challenges with a slight gamified twist.</p>
+
+        <p>As most side projects go, the code is nothing to celebrate. However, a software design pattern that I adapted turned out to be far more helpful than I expected. This pattern was MVCS.</p>
+        
+        <h2 id="what-is-mvcs">What is MVCS?</h2>
+
+        <p>This particular acronym stands for <strong>models</strong>, <strong>views</strong>, <strong>controllers</strong> and <strong>services</strong>.</p>
+
+        <p>It is a derivative of other software design patterns, <a href="https://en.wikipedia.org/wiki/model-view-controller">Model-View-Controller</a> (MVC) and Model-View-Controller-Store (MVCS).</p>
+
+        <p>MVCS is an <strong>architectural design pattern</strong> that helps define relationships between entities within an application. When applied, it helps to breakdown larger scenarios into smaller objects and defined behaviors.</p>
+
+        <p>I use this pattern <strong>not as a blueprint</strong> that must be strictly adhered to, <strong>but a set of guidelines</strong> to help:</p>
+
+        <ul>
+          <li>Reduce decision making</li>
+          <li>Reduce code complexity</li>
+          <li>Increase code readability</li>
+          <li>Simplify project file and folder structures</li>
+        </ul>
+
+        <p>There are "rules." But some can be bent, others can be broken.</p>
+
+        <h2 id="what-are-the-rules">What are the rules?</h2>
+
+        <p>The rules defined below are there to avoid any overlap in responsibility. The boundaries these rules create also ensure that classes do not grow in complexity, which improves readability.</p>
+
+        <p>That being said, the general rule is:</p>
+
+        <blockquote>
+          <p><strong>Controllers</strong> fetch <strong>models</strong> from <strong>services</strong> and present them in <strong>views</strong>.</p>
+        </blockquote>
+
+        <p>The pattern also helps with naming conventions. Each entity type is appended to the class name and filename, allowing me to quickly navigate my project for the logic I am after.</p>
+
+        <p>The rules for each entity are as follows.</p>
+
+        <h3>MODEL</h3>
+
+        <ul>
+          <li>Restricted to <strong>primitive types</strong> only e.g. <code>int</code>, <code>float</code>, <code>string</code> etc</li>
+          <li>Can include <strong>light logic</strong> over private member variables</li>
+          <li>Models do not reference each other directly (decoupled)</li>
+        </ul>
+
+        <h3>VIEW</h3>
+
+        <ul>
+          <li>Can use primitive types or models</li>
+          <li>The only entity <strong>responsible for presenting data</strong> to a user</li>
+          <li><strong>Notifies the controllers</strong> about user interaction</li>
+        </ul>
+
+        <h3>CONTROLLER</h3>
+
+        <ul>
+          <li>Contains all of the <strong>"game" logic</strong></li>
+          <li>Fetches data from <strong>services</strong></li>
+          <li>Updates <strong>models</strong> based on user input</li>
+          <li>Manages the flow between different parts of the application</li>
+        </ul>
+
+        <h3>SERVICE</h3>
+
+        <ul>
+          <li>Handles data persistence and retrieval</li>
+          <li>Manages external API calls</li>
+          <li>Provides a clean interface for data access</li>
+          <li>Can contain business logic that doesn't fit in controllers</li>
+        </ul>
+
+        <h2>Benefits of MVCS</h2>
+
+        <p>When implemented correctly, MVCS provides several key benefits:</p>
+
+        <ol>
+          <li><strong>Separation of Concerns</strong>: Each entity has a clear, single responsibility</li>
+          <li><strong>Testability</strong>: Individual components can be tested in isolation</li>
+          <li><strong>Maintainability</strong>: Code is easier to understand and modify</li>
+          <li><strong>Scalability</strong>: New features can be added without affecting existing code</li>
+          <li><strong>Team Collaboration</strong>: Different developers can work on different entities</li>
+        </ol>
+
+        <h2>Implementation Example</h2>
+
+        <p>Here's a simple example of how MVCS might look in Unity:</p>
+
+        <div class="bg-gray-900 rounded-lg p-6 text-green-400 font-mono text-sm overflow-x-auto">
+          <div class="text-gray-400">// Model</div>
+          <div>public class PlayerModel</div>
+          <div>&#123;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;public int Health &#123; get; set; &#125;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;public float Speed &#123; get; set; &#125;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;public Vector3 Position &#123; get; set; &#125;</div>
+          <div>&#125;</div>
+          <br/>
+          <div class="text-gray-400">// View</div>
+          <div>public class PlayerView : MonoBehaviour</div>
+          <div>&#123;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;[SerializeField] private Slider healthBar;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;[SerializeField] private Transform playerTransform;</div>
+          <br/>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;public void UpdateHealth(int health)</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&#123;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;healthBar.value = health;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&#125;</div>
+          <br/>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;public void UpdatePosition(Vector3 position)</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&#123;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;playerTransform.position = position;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&#125;</div>
+          <div>&#125;</div>
+          <br/>
+          <div class="text-gray-400">// Controller and Service classes follow similar patterns...</div>
+        </div>
+
+        <h2>When to Use MVCS</h2>
+
+        <p>MVCS is particularly useful when:</p>
+
+        <ul>
+          <li>Building complex applications with multiple features</li>
+          <li>Working in teams where code organization is crucial</li>
+          <li>Creating applications that need to be maintained long-term</li>
+          <li>Building applications that may need to scale significantly</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+
+        <p>MVCS is not a silver bullet, but it's a powerful tool for organizing code in a way that makes it more maintainable and understandable. The key is to use it as a guideline rather than a strict rulebook, adapting it to fit your specific project needs.</p>
+
+        <p>Remember, the goal is to write code that you (and others) can understand and maintain months or years down the line. MVCS helps achieve that goal by providing a clear structure for organizing your thoughts and code.</p>
+
+        <p>Happy coding!</p>
+      </div>
+    </div>
+  </article>
+</Base>

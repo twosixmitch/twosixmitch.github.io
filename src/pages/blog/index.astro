@@ -1,0 +1,202 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Create array of all blog posts with metadata
+const blogPosts = [
+  {
+    title: "A practical guide to game development with MVCS",
+    excerpt: "A practical guide to game development with MVCS design pattern in Unity. Learn how to build games using this architectural pattern.",
+    date: "2021-03-07",
+    readTime: "12 min read",
+    category: "Coding",
+    slug: "2021-03-07-mvcs",
+    image: "/blog/mvcs-unity.jpg"
+  },
+  {
+    title: "The baby who didn't want to be born - A self introduction",
+    excerpt: "A self-introduction and the story behind starting this blog. The journey from idea to reality.",
+    date: "2019-08-20",
+    readTime: "5 min read",
+    category: "Life",
+    slug: "2019-08-20-self-introduction",
+    image: "/blog/self-intro.jpg"
+  }
+];
+
+// Sort posts by date (newest first)
+blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+// Get unique categories from actual posts
+const categories = ["All", ...new Set(blogPosts.map(post => post.category))];
+---
+
+<Base 
+  title="Blog - TwoSixMitch" 
+  description="I am a software developer born and raised in New Zealand. I created this website to talk about things I know and some things I don't."
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-secondary-900 dark:to-secondary-800 py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-secondary-900 dark:text-white sm:text-5xl lg:text-6xl">
+        Blog
+      </h1>
+      <p class="mt-6 text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto">
+        I am a sftware developer born and raised in New Zealand.</br>I created this website to talk about things I know and some things I don't.
+      </p>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="py-12 border-b border-secondary-200 dark:border-secondary-700">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-4">
+        {categories.map((category) => (
+          <button
+            class="px-6 py-2 rounded-full text-sm font-medium transition-colors category-filter"
+            data-category={category === "All" ? "all" : category.toLowerCase().replace(/\s+/g, '-')}
+            class:list={[
+              "px-6 py-2 rounded-full text-sm font-medium transition-colors",
+              category === "All" 
+                ? "bg-primary-600 text-white" 
+                : "bg-secondary-100 text-secondary-700 hover:bg-secondary-200 dark:bg-secondary-700 dark:text-secondary-300 dark:hover:bg-secondary-600"
+            ]}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-posts-grid">
+        {blogPosts.map((post) => (
+          <article 
+            class="bg-white dark:bg-secondary-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 blog-post"
+            data-category={post.category.toLowerCase().replace(/\s+/g, '-')}
+          >
+            <div class="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900 dark:to-secondary-900 relative">
+              <div class="absolute top-4 left-4">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200">
+                  {post.category}
+                </span>
+              </div>
+              <div class="absolute bottom-4 right-4">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/80 text-secondary-700 dark:bg-secondary-800/80 dark:text-secondary-300">
+                  {post.readTime}
+                </span>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex items-center text-sm text-secondary-500 dark:text-secondary-400 mb-3">
+                <span class="mr-2">📅</span>
+                {new Date(post.date).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </div>
+              
+              <h3 class="text-xl font-semibold text-secondary-900 dark:text-white mb-3 line-clamp-2">
+                {post.title}
+              </h3>
+              
+              <p class="text-secondary-600 dark:text-secondary-400 mb-4 line-clamp-3">
+                {post.excerpt}
+              </p>
+              
+              <a 
+                href={`/blog/${post.slug}`}
+                class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors group"
+              >
+                Read more
+                <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- No Posts Message (hidden by default) -->
+      <div id="no-posts-message" class="hidden text-center py-12">
+        <span class="text-secondary-400 text-6xl mx-auto mb-4 block">🔍</span>
+        <h3 class="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+          No posts found
+        </h3>
+        <p class="text-secondary-600 dark:text-secondary-400">
+          Try adjusting your category filter to see more posts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<script>
+  // Category filtering functionality
+  const categoryFilters = document.querySelectorAll('.category-filter');
+  const blogPosts = document.querySelectorAll('.blog-post');
+  const noPostsMessage = document.getElementById('no-posts-message');
+
+  function filterPosts(category: string) {
+    let visiblePosts = 0;
+    
+    blogPosts.forEach((post) => {
+      const postElement = post as HTMLElement;
+      const postCategory = postElement.dataset?.category;
+      if (category === 'all' || postCategory === category) {
+        postElement.style.display = 'block';
+        visiblePosts++;
+      } else {
+        postElement.style.display = 'none';
+      }
+    });
+
+    // Show/hide no posts message
+    if (noPostsMessage && visiblePosts === 0) {
+      noPostsMessage.classList.remove('hidden');
+    } else if (noPostsMessage) {
+      noPostsMessage.classList.add('hidden');
+    }
+  }
+
+  categoryFilters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      const filterElement = filter as HTMLElement;
+      // Update active state
+      categoryFilters.forEach((f) => {
+        const fElement = f as HTMLElement;
+        fElement.classList.remove('bg-primary-600', 'text-white');
+        fElement.classList.add('bg-secondary-100', 'text-secondary-700', 'hover:bg-secondary-200');
+        fElement.classList.add('dark:bg-secondary-700', 'dark:text-secondary-300', 'dark:hover:bg-secondary-600');
+      });
+      
+      filterElement.classList.remove('bg-secondary-100', 'text-secondary-700', 'hover:bg-secondary-200');
+      filterElement.classList.remove('dark:bg-secondary-700', 'dark:text-secondary-300', 'dark:hover:bg-secondary-600');
+      filterElement.classList.add('bg-primary-600', 'text-white');
+
+      // Filter posts
+      const category = filterElement.dataset?.category || 'all';
+      filterPosts(category);
+    });
+  });
+</script>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
