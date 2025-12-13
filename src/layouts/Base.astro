@@ -7,6 +7,7 @@ import { Image } from 'astro:assets';
 import Header from '../components/Header.astro';
 // Footer component removed
 import SEO from '../components/SEO.astro';
+import profileHeadshot from '../assets/profile_headshot.png';
 
 export interface Props {
   title: string;
@@ -39,6 +40,9 @@ const {
 } = Astro.props;
 
 const canonicalURLString = canonicalURL ? new URL(canonicalURL, Astro.url).href : Astro.url.href;
+
+// Get optimized favicon URLs
+const faviconUrl = profileHeadshot.src;
 ---
 
 <!doctype html>
@@ -47,7 +51,8 @@ const canonicalURLString = canonicalURL ? new URL(canonicalURL, Astro.url).href 
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href={faviconUrl} />
+    <link rel="apple-touch-icon" href={faviconUrl} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURLString} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
