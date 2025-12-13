@@ -1,36 +1,36 @@
 ---
 import Base from '../layouts/Base.astro';
-import kanaChallengesIcon from '../assets/kana_challenges_app_icon.png';
-import screenshot1 from '../assets/kana_challenges_app_screenshot_1.png';
-import screenshot2 from '../assets/kana_challenges_app_screenshot_2.png';
-import screenshot3 from '../assets/kana_challenges_app_screenshot_3.png';
+import fabCollectIcon from '../assets/fab_collect_app_icon__180.png';
+import screenshot1 from '../assets/fab_collect_1_products.png';
+import screenshot2 from '../assets/fab_collect_2_product_cards.png';
+import screenshot3 from '../assets/fab_collect_3_card_details.png';
 ---
 
 <Base 
-  title="Kana Challenges - TwoSixMitch" 
-  description="Learn Japanese Hiragana and Katakana through interactive drawing practice and intelligent spaced repetition. Download Kana Challenges on the App Store."
+  title="FaB Collect - TwoSixMitch" 
+  description="Browse Flesh and Blood products and explore cards. View product details and card information for the Flesh and Blood trading card game. Download FaB Collect on the App Store."
 >
   <!-- Hero Section -->
   <section class="py-32 text-center">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-             <div class="w-[120px] h-[120px] mx-auto mb-8 flex items-center justify-center">
-                 <img 
-           src={kanaChallengesIcon.src} 
-           alt="Kana Challenges App Icon" 
-           class="w-full h-full object-contain rounded-2xl"
-         />
+      <div class="w-[120px] h-[120px] mx-auto mb-8 flex items-center justify-center">
+        <img 
+          src={fabCollectIcon.src} 
+          alt="FaB Collect App Icon" 
+          class="w-full h-full object-contain rounded-2xl"
+        />
       </div>
       
       <h1 class="text-5xl font-bold tracking-tight text-secondary-900 dark:text-white mb-6">
-        Kana Challenges
+        FaB Collect
       </h1>
       
       <p class="text-xl text-secondary-600 dark:text-secondary-300 mb-8 max-w-2xl mx-auto">
-        Learn the foundation of Japanese writing by practising the proper stroke order for both Hiragana and Katakana.
+        Browse Flesh and Blood products and explore the cards within them. View detailed information about products and individual cards.
       </p>
 
       <a
-        href="https://apps.apple.com/us/app/hiragana-practice-katakana/id6739795837"
+        href="#"
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-10 py-4 text-lg font-medium text-white shadow-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all transform hover:scale-105"
@@ -53,35 +53,35 @@ import screenshot3 from '../assets/kana_challenges_app_screenshot_3.png';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="text-center">
           <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-            <span class="text-primary-600 dark:text-primary-400 text-2xl">✍️</span>
+            <span class="text-primary-600 dark:text-primary-400 text-2xl">📦</span>
           </div>
-          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">Interactive Drawing</h3>
-          <p class="text-secondary-600 dark:text-secondary-400">Draw characters directly on your screen and get instant feedback to refine your skills</p>
+          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">Browse Products</h3>
+          <p class="text-secondary-600 dark:text-secondary-400">Explore available Flesh and Blood products and see what's available</p>
         </div>
         
         <div class="text-center">
           <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-            <span class="text-primary-600 dark:text-primary-400 text-2xl">🧠</span>
+            <span class="text-primary-600 dark:text-primary-400 text-2xl">🃏</span>
           </div>
-          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">Spaced Repetition</h3>
-          <p class="text-secondary-600 dark:text-secondary-400">Focus on what you need most, helping you retain knowledge for the long term</p>
+          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">View Cards</h3>
+          <p class="text-secondary-600 dark:text-secondary-400">See all the cards within each product and browse through your collection</p>
         </div>
         
-                 <div class="text-center">
-           <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-             <span class="text-primary-600 dark:text-primary-400 text-2xl">🎮</span>
-           </div>
-           <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">Mini-Games</h3>
-           <p class="text-secondary-600 dark:text-secondary-400">Play mini-games that make learning enjoyable and keep you motivated</p>
-         </div>
-         
-         <div class="text-center">
-           <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-             <span class="text-primary-600 dark:text-primary-400 text-2xl">📊</span>
-           </div>
-           <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">Progress Tracking</h3>
-           <p class="text-secondary-600 dark:text-secondary-400">Track your progress with detailed stats and insights into your learning journey</p>
-         </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+            <span class="text-primary-600 dark:text-primary-400 text-2xl">🔍</span>
+          </div>
+          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">Card Details</h3>
+          <p class="text-secondary-600 dark:text-secondary-400">View detailed information about each card including images and specifications</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+            <span class="text-primary-600 dark:text-primary-400 text-2xl">📱</span>
+          </div>
+          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white mb-2">Easy Navigation</h3>
+          <p class="text-secondary-600 dark:text-secondary-400">Intuitive interface designed for browsing products and cards with ease</p>
+        </div>
       </div>
     </div>
   </section>
@@ -91,48 +91,48 @@ import screenshot3 from '../assets/kana_challenges_app_screenshot_3.png';
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl font-bold text-secondary-900 dark:text-white mb-6">
-          See Kana Challenges in Action
+          See FaB Collect in Action
         </h2>
         <p class="text-lg text-secondary-600 dark:text-secondary-300 max-w-2xl mx-auto">
-          Experience the beautiful interface and intuitive design that makes learning Japanese writing systems engaging and effective.
+          Experience the intuitive interface designed to make browsing Flesh and Blood products and cards simple and enjoyable.
         </p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center">
           <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl p-4 mb-4">
-                         <img 
-               src={screenshot1.src} 
-               alt="Kana Challenges App Screenshot 1" 
-               class="w-full h-auto rounded-xl mx-auto"
-             />
+            <img 
+              src={screenshot1.src} 
+              alt="FaB Collect App Screenshot 1" 
+              class="w-full h-auto rounded-xl mx-auto"
+            />
           </div>
-          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white">Interactive Learning</h3>
-          <p class="text-sm text-secondary-600 dark:text-secondary-400">Master character writing with guided practice</p>
+          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white">Product Browsing</h3>
+          <p class="text-sm text-secondary-600 dark:text-secondary-400">Browse and explore available products</p>
         </div>
         
         <div class="text-center">
           <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl p-4 mb-4">
-                         <img 
-               src={screenshot2.src} 
-               alt="Kana Challenges App Screenshot 2" 
-               class="w-full h-auto rounded-xl mx-auto"
-             />
+            <img 
+              src={screenshot2.src} 
+              alt="FaB Collect App Screenshot 2" 
+              class="w-full h-auto rounded-xl mx-auto"
+            />
           </div>
-          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white">Explore Japanese</h3>
-          <p class="text-sm text-secondary-600 dark:text-secondary-400">Fun mini-games to reinforce learning</p>
+          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white">Product Cards</h3>
+          <p class="text-sm text-secondary-600 dark:text-secondary-400">View cards within each product</p>
         </div>
         
         <div class="text-center">
           <div class="bg-white dark:bg-secondary-800 rounded-2xl shadow-xl p-4 mb-4">
-                         <img 
-               src={screenshot3.src} 
-               alt="Kana Challenges App Screenshot 3" 
-               class="w-full h-auto rounded-xl mx-auto"
-             />
+            <img 
+              src={screenshot3.src} 
+              alt="FaB Collect App Screenshot 3" 
+              class="w-full h-auto rounded-xl mx-auto"
+            />
           </div>
-          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white">Visual Progress</h3>
-          <p class="text-sm text-secondary-600 dark:text-secondary-400">Monitor your learning journey</p>
+          <h3 class="text-lg font-semibold text-secondary-900 dark:text-white">Card Details</h3>
+          <p class="text-sm text-secondary-600 dark:text-secondary-400">Detailed information about each card</p>
         </div>
       </div>
     </div>
@@ -146,7 +146,7 @@ import screenshot3 from '../assets/kana_challenges_app_screenshot_3.png';
           Get in Touch
         </h2>
         <p class="text-lg text-secondary-600 dark:text-secondary-300 max-w-2xl mx-auto">
-          Have questions about Kana Challenges? Need support or want to share feedback? We'd love to hear from you!
+          Have questions about FaB Collect? Need support or want to share feedback? We'd love to hear from you!
         </p>
       </div>
       
@@ -172,13 +172,24 @@ import screenshot3 from '../assets/kana_challenges_app_screenshot_3.png';
     </div>
   </section>
 
-
+  <!-- Disclaimer Section -->
+  <section class="py-12 border-t border-secondary-200 dark:border-secondary-800">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="bg-secondary-50 dark:bg-secondary-800/50 rounded-lg p-6">
+        <p class="text-sm text-secondary-600 dark:text-secondary-400 text-center leading-relaxed">
+          <strong class="text-secondary-900 dark:text-white">FaB Collect is in no way affiliated with Legend Story Studios.</strong>
+          <br /><br />
+          Legend Story Studios®, Flesh and Blood™, and set names are trademarks of Legend Story Studios. Flesh and Blood characters, cards, logos, and art are property of Legend Story Studios.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Privacy Policy Link -->
   <section class="py-8 text-center border-t border-secondary-200 dark:border-secondary-800">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
       <a
-        href="/kana-challenges/privacy-policy"
+        href="/fab-collect/privacy-policy"
         class="text-sm text-secondary-500 hover:text-primary-600 dark:text-secondary-400 dark:hover:text-primary-400 transition-colors"
       >
         Privacy Policy
@@ -220,3 +231,4 @@ import screenshot3 from '../assets/kana_challenges_app_screenshot_3.png';
     });
   </script>
 </Base>
+
