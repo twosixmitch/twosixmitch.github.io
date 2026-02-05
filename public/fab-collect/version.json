@@ -1,5 +1,6 @@
 {
-  "latest_version": "1.3.1",
+  "latest_version_ios": "1.3.1",
+  "latest_version_android": "1.3.1",
   "message": "A new version is available!",
   "store_url_ios": "https://apps.apple.com/app/id6756224739",
   "store_url_android": "https://play.google.com/store/apps/details?id=com.twosixmitch.fabcollect"
